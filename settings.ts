@@ -13,9 +13,10 @@ export interface CSSInserterSettings {
 
 export const DEFAULT_SETTINGS: CSSInserterSettings = {
 	css: [
-		{ name: "Chapter Number", tag: "h2", class: "chapter-number", style: "font-size: 4em", contextMenu: true },
-		{ name: "No Indent", tag: "p", class: "no-indent", style: "text-indent: 0", contextMenu: false },
-		{ name: "Highlight", tag: "span", class: "highlight", style: "background-color: #fff88f; color: black", contextMenu: true },
+		{ name: "Chapter Number", tag: "h2", class: "chapter-number", style: "font-size: 4em", contextMenu: false },
+		{ name: "Paragraph with No Indent", tag: "p", class: "no-indent", style: "text-indent: 0", contextMenu: false },
+		{ name: "Yellow Highlight", tag: "span", class: "highlight", style: "background-color: #fff88f; color: black", contextMenu: true },
+		{ name: "Green Highlight", tag: "span", class: "highlight", style: "background-color: #1EFF00; color: black", contextMenu: true },
 	]
 }
 
@@ -41,9 +42,10 @@ export class GeneralSettingsTab extends PluginSettingTab {
 
 		const settingHeader: HTMLDivElement = containerEl.createDiv({ cls: "setting-header" });
 		settingHeader.createDiv({ text: "Name", cls: "value-header" });
-		settingHeader.createDiv({ text: "Tag", cls: "value-header" });
+		settingHeader.createDiv({ text: "Tag", cls: "tag-header" });
 		settingHeader.createDiv({ text: "Class", cls: "value-header" });
-		settingHeader.createDiv({ text: "Style", cls: "value-header" });
+		settingHeader.createDiv({ text: "Style", cls: "style-header" });
+		settingHeader.createDiv({ text: "", cls: "contextMenu-header"})
 
 		// Add CSS Button
 		let containerButton = settingHeader.createEl('div', { cls: 'container_add_button' });
@@ -91,7 +93,7 @@ export class GeneralSettingsTab extends PluginSettingTab {
 		const cssCounter = counter ?? css.length + 1; // 1-based
 
 		if (!counter) {
-			const newCSS: CSS = { name: "Highlight", tag: "span", class: "highlight", style: "background-color: #fff88f; color: black", contextMenu: false };
+			const newCSS: CSS = { name: "Yellow Highlight", tag: "span", class: "highlight", style: "background-color: #fff88f; color: black", contextMenu: false };
 			css.push(newCSS);
 			this.plugin.addCSSCommand(newCSS, cssCounter);
 			this.plugin.saveSettings();
@@ -100,37 +102,40 @@ export class GeneralSettingsTab extends PluginSettingTab {
 		const currentCSS = css[cssCounter - 1];
 
 		// CSS Name
-		let cssNameInput = settingItemContainer.createEl('input', { cls: 'css-inserter-setting-item-name' });
-		cssNameInput.value = currentCSS.name;
-		cssNameInput.onchange = (async (event) => {
-			const value = cssNameInput.value;
-			currentCSS.name = value;
-			await this.plugin.saveSettings();
-			this.plugin.addCSSCommand({
-				name: value,
-				tag: currentCSS.tag,
-				class: currentCSS.class,
-				style: currentCSS.style,
-				contextMenu: currentCSS.contextMenu
-			}, cssCounter + 1);
-		});
+		// let cssNameInput = settingItemContainer.createEl('input', { cls: 'css-inserter-setting-item-name' });
+		// cssNameInput.value = currentCSS.name;
+		// cssNameInput.onchange = (async (event) => {
+		// 	const value = cssNameInput.value;
+		// 	currentCSS.name = value;
+		// 	await this.plugin.saveSettings();
+		// 	this.plugin.addCSSCommand({
+		// 		name: value,
+		// 		tag: currentCSS.tag,
+		// 		class: currentCSS.class,
+		// 		style: currentCSS.style,
+		// 		contextMenu: currentCSS.contextMenu
+		// 	}, cssCounter + 1);
+		// });
 
-		// CSS
-		// new Setting(settingItemContainer)
-		// 	.setClass('setting-item-name')
-		// 	.addText(text => {
-		// 		return text.setValue(this.plugin.settings.css[cssCounter - 1]?.name ?? newCSS.name)
-		// 			.onChange(async (value) => {
-		// 				this.plugin.settings.css[cssCounter - 1].name = value;
-		// 				await this.plugin.saveSettings();
-		// 				this.plugin.addCSSCommand({
-		// 					name: value,
-		// 					css: this.plugin.settings.css[cssCounter - 1].css
-		// 				}, cssCounter);
-		// 			})
-		// 	});
+		// CSS Name
 		new Setting(settingItemContainer)
-			.setClass('css-inserter-setting-item-value')
+			.setClass('css-inserter-setting-item')
+			.addText(text => {
+				return text.setValue(currentCSS.name)
+					.onChange(async (value) => {
+						currentCSS.name = value;
+						await this.plugin.saveSettings();
+						this.plugin.addCSSCommand({
+							name: value,
+							tag: currentCSS.tag,
+                            class: currentCSS.class,
+                            style: currentCSS.style,
+							contextMenu: currentCSS.contextMenu
+						}, cssCounter);
+					})
+			});
+		new Setting(settingItemContainer)
+			.setClass('css-inserter-setting-item-tag')
 			.addText(text => {
 				return text.setValue(currentCSS.tag)
 					.onChange(async (value) => {
@@ -147,7 +152,7 @@ export class GeneralSettingsTab extends PluginSettingTab {
 			});
 
         new Setting(settingItemContainer)
-			.setClass('css-inserter-setting-item-value')
+			.setClass('css-inserter-setting-item')
 			.addText(text => {
 				return text.setValue(currentCSS.class)
 					.onChange(async (value) => {
@@ -164,7 +169,7 @@ export class GeneralSettingsTab extends PluginSettingTab {
 			});
 
         new Setting(settingItemContainer)
-			.setClass('css-inserter-setting-item-value')
+			.setClass('css-inserter-setting-item-style')
 			.addText(text => {
 				return text.setValue(currentCSS.style)
 					.onChange(async (value) => {
@@ -185,10 +190,10 @@ export class GeneralSettingsTab extends PluginSettingTab {
 			.setClass('css-inserter-setting-item-contextMenu')
 			.addToggle(toggle => {
 				toggle.setValue(currentCSS.contextMenu)
-					.setTooltip((toggle.getValue() ? "disable" : "enable") + " contex menu")
+					.setTooltip((toggle.getValue() ? "Disable" : "Enable") + " in the context menu")
 					.onChange(async () => {
 						const value = toggle.getValue();
-						toggle.setTooltip((value ? "disable" : "enable") + " contex menu");
+						toggle.setTooltip((value ? "Disable" : "Enable") + " in the context menu");
 						currentCSS.contextMenu = value;
 						await this.plugin.saveSettings();
 					})

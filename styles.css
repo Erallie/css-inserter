@@ -17,23 +17,34 @@ If your plugin does not need CSS, delete this file.
 	margin-bottom: 5px;
 }
 
-div.name-header {
-	padding-left: 10px;
-	flex: 1.2;
+div.value-header, div.tag-header, div.style-header {
+	padding-left: 0px;
 	font-size: 20px;
 }
 
-div.value-header {
-	font-size: 20px;
-	padding-left: 0px;
-	flex: 0.55;
+div.value-header, .css-inserter-setting-item {
+	flex: 1;
+}
+
+div.tag-header, .css-inserter-setting-item-tag {
+	flex: 0.3;
+	min-width: 50px;
+}
+
+div.style-header, .css-inserter-setting-item-style {
+	flex: 1.5;
+}
+
+.contextMenu-header {
+	display: flex;
+	width: 40px;
 }
 
 .container_add_button {
 	/* text-align: right;
 	margin-bottom: 20px; */
-	flex: 0.2;
 	display: flex;
+	width: 138px;
 }
 
 .container_add_button button {
@@ -53,10 +64,10 @@ div.value-header {
 
 }
 
-input.css-inserter-setting-item-name {
+input.css-inserter-setting-item {
 	/* width: 100%;
 	width: 90%; */
-	flex: 0.3;
+	flex: 0.6;
 	margin-right: 10px;
 	line-height: var(--line-height-tight);
 
@@ -73,11 +84,11 @@ input.css-inserter-setting-item-name {
 	outline: none;
 }
 
-input.css-inserter-setting-item-name: active {
+input.css-inserter-setting-item: active {
 	box-shadow: 0 0 0 2px var(--background-modifier-border-focus);
 }
 
-input.css-inserter-setting-item-name: focus {
+input.css-inserter-setting-item: focus {
 	box-shadow: 0 0 0 2px var(--background-modifier-border-focus);
 	transistion: box-shadow 0.15s ease-in-out, border 0.15s esse-in-out;
 }
@@ -87,27 +98,26 @@ input.css-inserter-setting-item-name: focus {
 	font-size: 1.05em;
 } */
 
-.css-inserter-setting-item-value {
+.css-inserter-setting-item, .css-inserter-setting-item-tag, .css-inserter-setting-item-style {
 	width: 100%;
-	flex: 0.6;
-    margin-left: 5px;
     margin-right: 5px;
 }
 
-.css-inserter-setting-item-value input {
+.css-inserter-setting-item input, .css-inserter-setting-item-tag input, .css-inserter-setting-item-style input {
 	width: 100%;
 	font-size: 1.05em;
 }
 
 .css-inserter-setting-item-contextMenu .checkbox-container {
+	display: flex;
 	margin-top: 4px;
-	margin-left: 8px;
-    margin-right: 8px;
+	margin-right: 5px;
 }
 
 .css-inserter-button-container {
 	text-align: right;
-    width: 6%;
+    width: 46px;
+	display: flex;
 	/* flex: 0.1; */
 }
 
