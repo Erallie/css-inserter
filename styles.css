@@ -1,0 +1,136 @@
+/*
+
+This CSS file will be included with your plugin, and
+available in the app when your plugin is enabled.
+
+If your plugin does not need CSS, delete this file.
+
+*/
+
+.css-inserter mark {
+	border-radius: 0.2em;
+}
+
+/* Setting Header */
+.setting-header {
+	display: flex;
+	margin-bottom: 5px;
+}
+
+div.name-header {
+	padding-left: 10px;
+	flex: 1.2;
+	font-size: 20px;
+}
+
+div.value-header {
+	font-size: 20px;
+	padding-left: 0px;
+	flex: 0.55;
+}
+
+.container_add_button {
+	/* text-align: right;
+	margin-bottom: 20px; */
+	flex: 0.2;
+	display: flex;
+}
+
+.container_add_button button {
+	margin-left: auto;
+	background-color: var(--interactive-accent);
+	font-size: medium;
+}
+
+/* Setting Items */
+.setting-item-container {
+	display: flex;
+	flex-direction: row;
+	border-top: 1px solid var(--background-modifier-border);
+	padding-top: 11px;
+	padding-bottom: 11px;
+	border-bottom: 1px solid var(--background-modifier-border);
+
+}
+
+input.css-inserter-setting-item-name {
+	/* width: 100%;
+	width: 90%; */
+	flex: 0.3;
+	margin-right: 10px;
+	line-height: var(--line-height-tight);
+
+	-webkit-app-region: no-drag;
+	background: var(--background-modifier-form-field);
+	border: var(--input-border-width) solid var(--background-modifier-border);
+	color: var(--text-normal);
+	font-family: inherit;
+	padding: var(--size-4-1) var(--size-4-2);
+	font-size: var(--font-ui-medium);
+	font-size: 15px;
+	font-weight: normal;
+	border-radius: var(--input-radius);
+	outline: none;
+}
+
+input.css-inserter-setting-item-name: active {
+	box-shadow: 0 0 0 2px var(--background-modifier-border-focus);
+}
+
+input.css-inserter-setting-item-name: focus {
+	box-shadow: 0 0 0 2px var(--background-modifier-border-focus);
+	transistion: box-shadow 0.15s ease-in-out, border 0.15s esse-in-out;
+}
+
+/* .setting-item-name input {
+	width: 90%;
+	font-size: 1.05em;
+} */
+
+.css-inserter-setting-item-value {
+	width: 100%;
+	flex: 0.6;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.css-inserter-setting-item-value input {
+	width: 100%;
+	font-size: 1.05em;
+}
+
+.css-inserter-setting-item-contextMenu .checkbox-container {
+	margin-top: 4px;
+	margin-left: 8px;
+    margin-right: 8px;
+}
+
+.css-inserter-button-container {
+	text-align: right;
+    width: 6%;
+	/* flex: 0.1; */
+}
+
+.css-inserter-delete-css-button {
+	background-color: var(--background-modifier-error);
+}
+
+
+/* Instructions */
+.container-instructions {
+	margin-top: 40px;
+}
+
+.instructions {
+	color: var(--text-muted);
+	font-size: var(--font-ui-smaller);
+	font-style: normal;
+}
+
+p.instructions {
+	margin-bottom: 5px;
+}
+
+ul.instructions {
+	margin-top: 1px;
+}
