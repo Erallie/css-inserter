@@ -15,7 +15,7 @@ Give your snippet a **name** and specify the HTML **tag**, the **class**, and th
 
 [Click here](https://www.w3schools.com/tags/default.asp) for a list of HTML tags to use.
 
-And here is a [guide](https://www.w3schools.com/html/html_styles.asp) on how to format the "style" part of the CSS snippet. Everything within the quotes following "style=" should be entered in the CSS snippet.
+And here is a [guide](https://www.w3schools.com/html/html_styles.asp) on how to format the "style" part of the CSS snippet. Everything within the quotes following "`style=`" should be entered in the CSS snippet.
 
 ![Settings Panel](./assets/Settings_Panel.png)
 
