@@ -8,9 +8,7 @@ This plugin requires basic knowledge of CSS. Links on how to format each setting
 
 # Instructions
 ## Setting Up CSS Snippets
-After installing the plugin, first go to the settings panel and set up your CSS snippets the way you want.
-
-Give your snippet a **name** and specify the **tag**, the **class**, and the **style** you want the snippet to apply.
+After installing the plugin, first go to the settings panel and set up your CSS snippets the way you want. Give your snippet a **name** and specify the **tag**, the **class**, and the **style** you want the snippet to apply.
 
 ![Settings Panel](./assets/Settings_Panel.png)
 
