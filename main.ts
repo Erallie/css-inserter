@@ -62,7 +62,22 @@ export default class CSSInserter extends Plugin {
 			name: `${css.name}`,
 			editorCallback: (editor: Editor, view: MarkdownView) => {
 				const selection = editor.getSelection();
-				editor.replaceSelection(`<${css.tag} class="${css.class}" style="${css.style}">${selection}</${css.tag}>`);
+				let thisClass = "";
+				if (`${css.class}` == "") {
+					thisClass = "";
+				}
+				else {
+					thisClass = ` class=\"${css.class}\"`;
+				}
+				let thisStyle = "";
+				if (`${css.style}` == "")
+				{
+					thisStyle = "";
+				}
+				else {
+					thisStyle = ` style=\"${css.style}\"`;
+				}
+				editor.replaceSelection(`<${css.tag}` + thisClass + thisStyle + `>${selection}</${css.tag}>`);
 			}
 		});
 	}

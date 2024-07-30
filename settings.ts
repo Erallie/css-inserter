@@ -158,12 +158,20 @@ export class GeneralSettingsTab extends PluginSettingTab {
 			.addText(text => {
 				return text.setValue(currentCSS.class)
 					.onChange(async (value) => {
-						currentCSS.class = value;
+						let newValue;
+						if (value == "")
+						{
+							newValue = "";
+						}
+						else {
+							newValue = value;
+						}
+						currentCSS.class = newValue;
 						await this.plugin.saveSettings();
 						this.plugin.addCSSCommand({
 							name: currentCSS.name,
 							tag: currentCSS.tag,
-                            class: value,
+                            class: newValue,
                             style: currentCSS.style,
 							contextMenu: currentCSS.contextMenu
 						}, cssCounter + 1);
@@ -175,13 +183,21 @@ export class GeneralSettingsTab extends PluginSettingTab {
 			.addText(text => {
 				return text.setValue(currentCSS.style)
 					.onChange(async (value) => {
-						currentCSS.style = value;
+						let newValue;
+						if (value == "")
+						{
+							newValue = "";
+						}
+						else {
+							newValue = value;
+						}
+						currentCSS.style = newValue;
 						await this.plugin.saveSettings();
 						this.plugin.addCSSCommand({
 							name: currentCSS.name,
 							tag: currentCSS.tag,
                             class: currentCSS.class,
-                            style: value,
+                            style: newValue,
 							contextMenu: currentCSS.contextMenu
 						}, cssCounter + 1);
 					})
