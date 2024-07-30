@@ -14,7 +14,7 @@ export interface CSSInserterSettings {
 export const DEFAULT_SETTINGS: CSSInserterSettings = {
 	css: [
 		{ name: "Chapter Number", tag: "h2", class: "chapter-number", style: "font-size: 4em", contextMenu: false },
-		{ name: "Paragraph with No Indent", tag: "p", class: "no-indent", style: "text-indent: 0", contextMenu: false },
+		{ name: "No Indent", tag: "p", class: "no-indent", style: "text-indent: 0", contextMenu: false },
 		{ name: "Yellow Highlight", tag: "span", class: "highlight", style: "background-color: #fff88f; color: black", contextMenu: true },
 		{ name: "Green Highlight", tag: "span", class: "highlight", style: "background-color: #1EFF00; color: black", contextMenu: true },
 	]
@@ -35,9 +35,11 @@ export class GeneralSettingsTab extends PluginSettingTab {
 		this.clearHtml();
 
 		containerEl.empty();
-		containerEl.createEl('div').createEl('span', { text: 'A fork of a plugin created by ' }).createEl('a', { text: 'Juanjo Arranz', href: 'https://github.com/juanjoarranz' });
-        containerEl.createEl('span', {text: 'Modified by '}).createEl('a', { text: 'Erika Gozar', href: 'https://gozarproductions.com' });
+		containerEl.createEl('span', { text: 'A fork of ', cls: 'instructions'}).createEl('a', {text: 'Style Text', href: 'https://github.com/juanjoarranz/style-text-obsidian-plugin', cls: 'instructions'});
+		containerEl.createEl('span', {text: ' created by ', cls: 'instructions'}).createEl('a', { text: 'Juanjo Arranz', href: 'https://github.com/juanjoarranz', cls: 'instructions' }).createEl('br');
+        containerEl.createEl('span', {text: 'Modified by ', cls: 'instructions'}).createEl('a', { text: 'Erika Gozar', href: 'https://gozarproductions.com', cls: 'instructions' });
 
+		containerEl.createEl('h1', {text: 'CSS Inserter Settings'});
 		containerEl.createEl('p', { text: 'Inserts user-defined css snippets into the selected text.' });
 
 		const settingHeader: HTMLDivElement = containerEl.createDiv({ cls: "setting-header" });
@@ -257,7 +259,17 @@ export class GeneralSettingsTab extends PluginSettingTab {
 
 		const containerInstructions = containerEl.createEl('div', { cls: 'container-instructions' });
 
+		
 		// Instructions
+		//Link to list of tags
+		containerInstructions.createEl('a', { text: 'Click here', href: 'https://www.w3schools.com/tags/default.asp', cls: 'instructions' });
+		containerInstructions.createEl('span', { text: ' for a list of HTML tags to use.', cls: 'instructions' }).createEl('br');
+		containerInstructions.createEl('span', {text: 'Here is a ', cls: 'instructions'}).createEl('a', { text: 'guide', href: 'https://www.w3schools.com/html/html_styles.asp', cls: 'instructions' });
+		containerInstructions.createEl('span', { text: ' on how to format the \"style\" part of the CSS snippet.', cls: 'instructions' }).createEl('br');
+		containerInstructions.createEl('span', {text: "Everything within the quotes following \"style=\" should be entered in the CSS snippet.", cls: 'instructions'});
+		
+		
+
 		// With Command Palette
 		containerInstructions.createEl('p', { text: 'Usage with the Command Palette:', cls: 'instructions' });
 		const commandPaletteUl = containerInstructions.createEl('ul', { cls: 'instructions' });
@@ -276,7 +288,7 @@ export class GeneralSettingsTab extends PluginSettingTab {
 		removeUl.createEl('li', { text: 'Press <Enter>' });
 	}
 
-	private donate(containerEl: HTMLElement) {
+	/* private donate(containerEl: HTMLElement) {
 		const donateContainer = containerEl.createEl('div', { cls: 'donate' });
 		donateContainer.setCssStyles({ marginTop: '40px' });
 
@@ -284,5 +296,5 @@ export class GeneralSettingsTab extends PluginSettingTab {
 		buyMeCoffeeImage.src = 'https://cdn.ko-fi.com/cdn/kofi3.png?v=3';
 		donateContainer.createEl('a', { href: 'https://ko-fi.com/F1F6H4TAR', text: '' }).appendChild(buyMeCoffeeImage);
 
-	}
+	} */
 }
