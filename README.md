@@ -1,6 +1,6 @@
 # About CSS Inserter
 Inserts user-defined css snippets into the selected text.
-This is a fork of [Style Text](https://github.com/juanjoarranz/style-text-obsidian-plugin).
+This is a fork of [Style Text](https://github.com/juanjoarranz/style-text-obsidian-plugin) by [Juanjo Arranz](https://github.com/juanjoarranz).
 
 The main difference between this plugin and [Style Text](https://github.com/juanjoarranz/style-text-obsidian-plugin) is that with CSS Inserter you can specify the html tag, the class, and the style for each CSS snippet.
 
@@ -10,18 +10,18 @@ This plugin requires basic knowledge of CSS. Links on how to format each setting
 ## Setting Up CSS Snippets
 After installing the plugin, first go to the settings panel and set up your CSS snippets the way you want.
 
+Give your snippet a **name** and specify the **tag**, the **class**, and the **style** you want the snippet to apply.
+
 ![Settings Panel](./assets/Settings_Panel.png)
 
-Give your snippet a **name** and specify the **tag**, the **class**, and the **style** you want the snippet to apply.
+The toggle option next to the snippet disables/enables showing the CSS snippet in the context menu after you right click your selected text.
+
+You can re-order snippets by pressing the up and down arrow buttons next to the snippet, or delete the entire snippet by pressing the trash bin button.
 
 [Click here](https://www.w3schools.com/tags/default.asp) for a list of HTML tags to use.
 
 [Here](https://www.w3schools.com/html/html_styles.asp) is a guide on how to format the "style" part of the CSS snippet.
 Everything within the quotes following "style=" should be entered in the CSS snippet.
-
-The toggle option next to the snippet disables/enables showing the CSS snippet in the context menu after you right click your selected text.
-
-You can re-order snippets by pressing the up and down arrow buttons next to the snippet, or delete the entire snippet by pressing the trash bin button.
 ## Applying CSS Snippets
 To apply the CSS snippet, first go to edit mode and select the text you want to apply the snippet to.
 
