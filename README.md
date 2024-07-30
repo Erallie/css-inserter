@@ -10,13 +10,13 @@ This plugin requires basic knowledge of CSS. Links on how to format each setting
 ## Setting Up CSS Snippets
 After installing the plugin, first go to the settings panel and set up your CSS snippets the way you want. Give your snippet a **name** and specify the **tag**, the **class**, and the **style** you want the snippet to apply.
 
-![Settings Panel](./assets/Settings_Panel.png)
+[Click here](https://www.w3schools.com/tags/default.asp) for a list of HTML tags to use.
 
-The toggle option next to the snippet disables/enables showing the CSS snippet in the context menu after you right click your selected text.
+![Settings Panel](./assets/Settings_Panel.png)
 
 You can re-order snippets by pressing the up and down arrow buttons next to the snippet, or delete the entire snippet by pressing the trash bin button.
 
-[Click here](https://www.w3schools.com/tags/default.asp) for a list of HTML tags to use.
+The toggle option next to the snippet disables/enables showing the CSS snippet in the context menu after you right click your selected text.
 
 [Here](https://www.w3schools.com/html/html_styles.asp) is a guide on how to format the "style" part of the CSS snippet.
 Everything within the quotes following "style=" should be entered in the CSS snippet.
