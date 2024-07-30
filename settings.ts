@@ -17,6 +17,7 @@ export const DEFAULT_SETTINGS: CSSInserterSettings = {
 		{ name: "No Indent", tag: "p", class: "no-indent", style: "text-indent: 0", contextMenu: false },
 		{ name: "Yellow Highlight", tag: "span", class: "highlight", style: "background-color: #fff88f; color: black", contextMenu: true },
 		{ name: "Green Highlight", tag: "span", class: "highlight", style: "background-color: #1EFF00; color: black", contextMenu: true },
+		{ name: "Nothing", tag: "span", class: "", style: "", contextMenu: false },
 	]
 }
 
