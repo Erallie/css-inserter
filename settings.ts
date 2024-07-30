@@ -24,10 +24,10 @@ export class GeneralSettingsTab extends PluginSettingTab {
 
 	plugin: CSSInserter;
 
-	constructor(app: App, plugin: CSSInserter) {
+	/* constructor(app: App, plugin: CSSInserter) {
 		super(app, plugin);
 		this.plugin = plugin;
-	}
+	} */
 
 	display() {
 		const { containerEl } = this;
@@ -61,7 +61,7 @@ export class GeneralSettingsTab extends PluginSettingTab {
 
 		this.addInstructions(containerEl);
 
-		this.donate(containerEl);
+		/* this.donate(containerEl); */
 	}
 
 
