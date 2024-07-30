@@ -51,4 +51,4 @@ You can remove the CSS snippet after selecting it. Clicking on the CSS-ified tex
 After you select the CSS-ified text, you can remove the CSS from the text by any of the three methods:
  1. Right click on the note and select "Remove CSS" from the context menu (see [Context Menu](#1-context-menu)).
  2. Open the Command Palette (`Ctrl + P`) and select the "CSS Inserter: Remove CSS" command (see [Command Palette](#2-command-palette)).
- 3. Set up a hotkey prior in your Obsidian settings. Afterward, select the text and press the hotkey (see [Hotkeys](#3-hotkeys)).
+ 3. Set up a hotkey prior in your Obsidian settings. Afterward, select the text and press the hotkey combination (see [Hotkeys](#3-hotkeys)).
