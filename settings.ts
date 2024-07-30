@@ -39,8 +39,8 @@ export class GeneralSettingsTab extends PluginSettingTab {
 		containerEl.createEl('span', {text: ' created by ', cls: 'instructions'}).createEl('a', { text: 'Juanjo Arranz', href: 'https://github.com/juanjoarranz', cls: 'instructions' }).createEl('br');
         containerEl.createEl('span', {text: 'Modified by ', cls: 'instructions'}).createEl('a', { text: 'Erika Gozar', href: 'https://gozarproductions.com', cls: 'instructions' });
 
-		containerEl.createEl('h1', {text: 'CSS Inserter Settings'});
-		containerEl.createEl('p', { text: 'Inserts user-defined css snippets into the selected text.' });
+		containerEl.createEl('h1', {text: 'CSS Inserter'});
+		containerEl.createEl('p', { text: 'CSS snippets to be applied to the selected text:' });
 
 		const settingHeader: HTMLDivElement = containerEl.createDiv({ cls: "setting-header" });
 		settingHeader.createDiv({ text: "Name", cls: "value-header" });
@@ -51,7 +51,7 @@ export class GeneralSettingsTab extends PluginSettingTab {
 
 		// Add CSS Button
 		let containerButton = settingHeader.createEl('div', { cls: 'container_add_button' });
-		let addCSSButton = containerButton.createEl('button', { text: 'Add CSS' });
+		let addCSSButton = containerButton.createEl('button', { text: 'Add CSS Snippet' });
 
 		// Setting Items
 		const settingContainer: HTMLDivElement = containerEl.createDiv();
@@ -225,7 +225,7 @@ export class GeneralSettingsTab extends PluginSettingTab {
 		const deleteButtonContainer = settingItemContainer.createDiv({ cls: 'css-inserter-button-container' });
 		const deleteButton = new ButtonComponent(deleteButtonContainer);
 		deleteButton.setIcon('trash-2').setClass('css-inserter-delete-css-button')
-			.setTooltip("Remove CSS")
+			.setTooltip("Remove CSS Snippet")
 			.onClick(async () => {
 				this.plugin.settings.css.splice(cssCounter - 1, 1);
 				await this.plugin.saveSettings();
@@ -264,10 +264,12 @@ export class GeneralSettingsTab extends PluginSettingTab {
 		//Link to list of tags
 		containerInstructions.createEl('a', { text: 'Click here', href: 'https://www.w3schools.com/tags/default.asp', cls: 'instructions' });
 		containerInstructions.createEl('span', { text: ' for a list of HTML tags to use.', cls: 'instructions' }).createEl('br');
+		containerInstructions.createEl('br');
 		containerInstructions.createEl('span', {text: 'Here is a ', cls: 'instructions'}).createEl('a', { text: 'guide', href: 'https://www.w3schools.com/html/html_styles.asp', cls: 'instructions' });
+		// containerInstructions.createEl('a', { text: 'Here', href: 'https://www.w3schools.com/html/html_styles.asp', cls: 'instructions' });
 		containerInstructions.createEl('span', { text: ' on how to format the \"style\" part of the CSS snippet.', cls: 'instructions' }).createEl('br');
-		containerInstructions.createEl('span', {text: "Everything within the quotes following \"style=\" should be entered in the CSS snippet.", cls: 'instructions'});
-		
+		containerInstructions.createEl('span', {text: "Everything within the quotes following \"style=\" should be entered in the CSS snippet.", cls: 'instructions'}).createEl('br');
+		containerInstructions.createEl('br');
 		
 
 		// With Command Palette
@@ -275,12 +277,12 @@ export class GeneralSettingsTab extends PluginSettingTab {
 		const commandPaletteUl = containerInstructions.createEl('ul', { cls: 'instructions' });
 		commandPaletteUl.createEl('li', { text: 'Select text on the editor' });
 		commandPaletteUl.createEl('li', { text: 'Open the Command Palette: <Ctrl> or <Cmd> + <P>' });
-		commandPaletteUl.createEl('li', { text: 'Look up the CSS to apply: "CSS Inserter ..."' });
-		commandPaletteUl.createEl('li', { text: 'Choose the CSS: <Enter>' });
+		commandPaletteUl.createEl('li', { text: 'Look up the CSS snippet to apply: "CSS Inserter ..."' });
+		commandPaletteUl.createEl('li', { text: 'Choose the CSS snippet: <Enter>' });
 
 
 		// Remove Applied CSS
-		containerInstructions.createEl('p', { text: 'Remove Applied CSS:', cls: 'instructions' });
+		containerInstructions.createEl('p', { text: 'Remove Applied CSS Snippet:', cls: 'instructions' });
 		const removeUl = containerInstructions.createEl('ul', { cls: 'instructions' });
 		removeUl.createEl('li', { text: 'Select the cssd text on the editor' });
 		removeUl.createEl('li', { text: 'Open the Command Palette: <Ctrl> or <Cmd> + <P>' });
