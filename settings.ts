@@ -37,8 +37,9 @@ export class GeneralSettingsTab extends PluginSettingTab {
 
 		containerEl.empty();
 		containerEl.createEl('span', { text: 'A fork of ', cls: 'instructions'}).createEl('a', {text: 'Style Text', href: 'https://github.com/juanjoarranz/style-text-obsidian-plugin', cls: 'instructions'});
-		containerEl.createEl('span', {text: ' created by ', cls: 'instructions'}).createEl('a', { text: 'Juanjo Arranz', href: 'https://github.com/juanjoarranz', cls: 'instructions' }).createEl('br');
-        containerEl.createEl('span', {text: 'Modified by ', cls: 'instructions'}).createEl('a', { text: 'Erika Gozar', href: 'https://gozarproductions.com', cls: 'instructions' });
+		containerEl.createEl('span', {text: ' created by ', cls: 'instructions'}).createEl('a', { text: 'Juanjo Arranz', href: 'https://github.com/juanjoarranz', cls: 'instructions' });
+		containerEl.createEl('span', {text: '.', cls: 'instructions'}).createEl('br');
+  containerEl.createEl('span', {text: 'Modified by Erika Gozar.', cls: 'instructions'});
 
 		containerEl.createEl('h1', {text: 'CSS Inserter'});
 		containerEl.createEl('p', { text: 'CSS snippets to be applied to the selected text:' });
