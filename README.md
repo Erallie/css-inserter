@@ -1,7 +1,7 @@
 # About CSS Inserter
-This plugin inserts user-defined css snippets into the selected text.
+This is a plugin for [Obsidian](https://obsidian.md/) that inserts user-defined css snippets into the selected text.
 
-This is a fork of [Style Text](https://github.com/juanjoarranz/style-text-obsidian-plugin) by [Juanjo Arranz](https://github.com/juanjoarranz).
+This plugin is a fork of [Style Text](https://github.com/juanjoarranz/style-text-obsidian-plugin) by [Juanjo Arranz](https://github.com/juanjoarranz).
 
 The main difference between this plugin and [Style Text](https://github.com/juanjoarranz/style-text-obsidian-plugin) is that with CSS Inserter you can specify the html tag, the class, and the style for each CSS snippet.
 
