@@ -5,7 +5,7 @@ This is a fork of [Style Text](https://github.com/juanjoarranz/style-text-obsidi
 
 The main difference between this plugin and [Style Text](https://github.com/juanjoarranz/style-text-obsidian-plugin) is that with CSS Inserter you can specify the html tag, the class, and the style for each CSS snippet.
 
-This plugin requires basic knowledge of CSS. Links on how to format each setting can be found under ["Setting Up CSS Snippets"](#setting-up-css-snippets).
+This plugin requires basic knowledge of CSS. Links on how to format each setting can be found under [Setting Up CSS Snippets](#setting-up-css-snippets).
 
 # Instructions
 ## Setting Up CSS Snippets
