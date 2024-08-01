@@ -18,9 +18,9 @@ Give your snippet a **name** and specify the HTML **tag**, the **class**, and th
 > And here is a [guide](https://www.w3schools.com/html/html_styles.asp) on how to format the **style** part of the CSS snippet.
 > Everything within the quotes following `style=` should be entered in the CSS snippet.
 
-<img src="./Attachments/settings-panel.png" anchor="interface"></img>
+![Settings panel](./Attachments/settings-panel.png#interface)
 
-You can re-order snippets by pressing the **up arrow** ( <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-up" anchor="icon"><path d="m5 12 7-7 7 7"/><path d="M12 19V5"/></svg> ) and **down arrow** ( <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-down" anchor="icon"><path d="M12 5v14"/><path d="m19 12-7 7-7-7"/></svg> ) buttons next to the snippet, or delete the entire snippet by pressing the **trash bin** ( <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-trash-2"><path d="M3 6h18"/><path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"/><path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"/><line x1="10" x2="10" y1="11" y2="17"/><line x1="14" x2="14" y1="11" y2="17"/></svg> ) button.
+You can re-order snippets by pressing the **up arrow** ( ![Up arrow](./Attachments/icons/lucide-arrow-up.svg#18x18#icon) ) and **down arrow** ( ![Down arrow](./Attachments/icons/lucide-arrow-down.svg#18x18#icon) ) buttons next to the snippet, or delete the entire snippet by pressing the **trash bin** ( ![Trash bin](./Attachments/icons/lucide-trash-2.svg#18x18#icon) ) button.
 
 The **toggle** option next to the snippet disables/enables showing the CSS snippet in the **Context menu**.
 
@@ -29,6 +29,6 @@ To apply or remove a CSS snippet, first go into **Edit mode** and select the tex
 
 After you do that, there are three ways you can apply or remove a CSS snippet:
  1. On desktop: Right-click the note to open the **Context menu**. Enabled snippets will appear there. Select the snippet you want to apply, or select "Remove CSS" to remove the applied CSS snippet.<br>
-    <img src="./Attachments/context-menu.png" width=400px height=390px anchor="interface" text-align=center></img>
+    <img src="./Attachments/context-menu.png" width=400px height=390px anchor="interface" style="text-align: center"></img>
  2. Open the **Command palette** and search for and select the CSS style you'd like to apply, or perform the "CSS Inserter: Remove CSS" command to remove the CSS snippet (see [Command palette](https://help.obsidian.md/Plugins/Command+palette)).
  3. Set up a **Hotkey** prior for your desired CSS snippet (or for the "CSS Inserter: Remove CSS" command if you want to remove the CSS) in **Settings → CSS Inserter**. Afterward, select the text and perform the **Hotkey** (see [Hotkeys](https://help.obsidian.md/User+interface/Hotkeys)).
