@@ -18,9 +18,9 @@ Give your snippet a **name** and specify the HTML **tag**, the **class**, and th
 > And here is a [guide](https://www.w3schools.com/html/html_styles.asp) on how to format the **style** part of the CSS snippet.
 > Everything within the quotes following `style=` should be entered in the CSS snippet.
 
-![Settings panel](./Attachments/settings-panel.png#interface)
+<img src="./Attachments/settings-panel.png#interface" anchor="interface"></img>
 
-You can re-order snippets by pressing the **up arrow** ( ![Up arrow](./Attachments/icons/lucide-arrow-up.svg#18x18#icon) ) and **down arrow** ( ![Down arrow](./Attachments/icons/lucide-arrow-down.svg#18x18#icon) ) buttons next to the snippet, or delete the entire snippet by pressing the **trash bin** ( ![Trash bin](./Attachments/icons/lucide-trash-2.svg#18x18#icon) ) button.
+You can re-order snippets by pressing the **up arrow** ( <img src="./Attachments/icons/lucide-arrow-up.svg" anchor="icon"></img> ) and **down arrow** ( <img src="./Attachments/icons/lucide-arrow-down.svg" anchor="icon"></img> ) buttons next to the snippet, or delete the entire snippet by pressing the **trash bin** ( <img src="./Attachments/icons/lucide-trash-2.svg" anchor="icon"></img> ) button.
 
 The **toggle** option next to the snippet disables/enables showing the CSS snippet in the **Context menu**.
 
