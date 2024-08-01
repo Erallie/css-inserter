@@ -19,9 +19,9 @@ Give your snippet a **name** and specify the HTML **tag**, the **class**, and th
 > And here is a [guide](https://www.w3schools.com/html/html_styles.asp) on how to format the **style** part of the CSS snippet.
 > Everything within the quotes following `style=` should be entered in the CSS snippet.
 
-![[./Attachments/settings-panel.png#interface]]
+![Settings panel](./Attachments/settings-panel.png#interface)
 
-You can re-order snippets by pressing the **up arrow** ( ![[./Attachments/icons/lucide-arrow-up.svg#icon]] ) and **down arrow** ( ![[./Attachments/icons/lucide-arrow-down.svg#icon]] ) buttons next to the snippet, or delete the entire snippet by pressing the **trash bin** ( ![[./Attachments/icons/lucide-trash-2.svg#icon]] ) button.
+You can re-order snippets by pressing the **up arrow** ( ![Up arrow](./Attachments/icons/lucide-arrow-up.svg#icon) ) and **down arrow** ( ![Down arrow](./Attachments/icons/lucide-arrow-down.svg#icon) ) buttons next to the snippet, or delete the entire snippet by pressing the **trash bin** ( ![Trash bin](./Attachments/icons/lucide-trash-2.svg#icon) ) button.
 
 The **toggle** option next to the snippet disables/enables showing the CSS snippet in the **Context menu**.
 
@@ -30,6 +30,6 @@ To apply or remove a CSS snippet, first go into **Edit mode** and select the tex
 
 After you do that, there are three ways you can apply or remove a CSS snippet:
  1. On Desktop: Right-click the note to open the **Context menu**. Enabled snippets will appear there. Select the snippet you want to apply, or select "Remove CSS" to remove the applied CSS snippet.
-    ![[./Attachments/context-menu.png#interface]]
+    ![Context menu](./Attachments/context-menu.png#interface)
  2. Open the **Command palette** and search for and select the CSS style you'd like to apply, or perform the "CSS Inserter: Remove CSS" command to remove the CSS snippet (see [Command palette](https://help.obsidian.md/Plugins/Command+palette)).
  3. Set up a **Hotkey** prior for your desired CSS snippet (or for the "CSS Inserter: Remove CSS" command if you want to remove the CSS) in **Settings → CSS Inserter**. Afterward, select the text and perform the **Hotkey** (see [Hotkeys](https://help.obsidian.md/User+interface/Hotkeys)).
