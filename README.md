@@ -29,6 +29,6 @@ To apply or remove a CSS snippet, first go into **Edit mode** and select the tex
 
 After you do that, there are three ways you can apply or remove a CSS snippet:
  1. On desktop: Right-click the note to open the **Context menu**. Enabled snippets will appear there. Select the snippet you want to apply, or select "Remove CSS" to remove the applied CSS snippet.
-    ![Context menu](./Attachments/context-menu.png#interface)
+    ![Context menu](./Attachments/context-menu.png#interface#300x293)
  2. Open the **Command palette** and search for and select the CSS style you'd like to apply, or perform the "CSS Inserter: Remove CSS" command to remove the CSS snippet (see [Command palette](https://help.obsidian.md/Plugins/Command+palette)).
  3. Set up a **Hotkey** prior for your desired CSS snippet (or for the "CSS Inserter: Remove CSS" command if you want to remove the CSS) in **Settings → CSS Inserter**. Afterward, select the text and perform the **Hotkey** (see [Hotkeys](https://help.obsidian.md/User+interface/Hotkeys)).
