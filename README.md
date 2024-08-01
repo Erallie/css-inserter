@@ -25,34 +25,11 @@ You can re-order snippets by pressing the **up arrow** ( ![[lucide-arrow-up.svg#
 
 The **toggle** option next to the snippet disables/enables showing the CSS snippet in the **Context menu**.
 
-## Apply CSS Snippets
-To apply the CSS snippet, first go into **Edit mode** and select the text you want to apply the snippet to.
+## Apply and Remove CSS snippets
+To apply or remove a CSS snippet, first go into **Edit mode** and select the text you want to apply the snippet to or remove the snippet from. The first time you select text that already has CSS snippets applied, the entire text will automatically be selected for you.
 
-After you do that, there are three ways you can apply a CSS snippet:
-
-### 1. Context menu
-After selecting your desired text, open the **Context menu**. Enabled snippets will appear there. You can select the CSS snippet you would like to apply to the selected text. After doing so, the snippet will be applied to the selected text.
-
-![[context-menu.png#interface]]
-
-### 2. Command palette
-After selecting your desired text, open the **Command palette** and search for the CSS snippet you'd like to apply.
-
-![[command-palette.png#interface]]
-
-Select the CSS snippet you'd like to apply to your text. After doing so, the snippet will be applied to the selected text.
-
-### 3. Hotkeys
-Prior to selecting the text, you can go to **Settings → Hotkeys** beforehand and add a **Hotkey** for each CSS snippet.
-
-![[hotkeys.png#interface]]
-
-After setting these up, select your desired text, and perform the **Hotkey** you previously set up for the CSS snippet of your choice. The snippet will be applied to the selected text.
-
-## Remove CSS snippets
-You can remove the CSS snippet after selecting it. Selecting the CSS-ified text the first time will automatically select the entire text for you.
-
-After you select the CSS-ified text, you can remove the CSS from the text by any of the three methods:
- 1. Open the **Context menu** and select "Remove CSS" (see [Context menu](#1-context-menu)).
- 2. Open the **Command palette** and perform the "CSS Inserter: Remove CSS" command (see [Command palette](#2-command-palette)).
- 3. Set up a **Hotkey** prior in **Settings → CSS Inserter**. Afterward, select the text and perform the **Hotkey** (see [Hotkeys](#3-hotkeys)).
+After you do that, there are three ways you can apply or remove a CSS snippet:
+ 1. On Desktop: Right-click the note to open the **Context menu**. Enabled snippets will appear there. Select the snippet you want to apply, or select "Remove CSS" to remove the applied CSS snippet.
+    ![[context-menu.png#interface]]
+ 2. Open the **Command palette** and search for and select the CSS style you'd like to apply, or perform the "CSS Inserter: Remove CSS" command to remove the CSS snippet (see [Command palette](https://help.obsidian.md/Plugins/Command+palette)).
+ 3. Set up a **Hotkey** prior for your desired CSS snippet (or for the "CSS Inserter: Remove CSS" command if you want to remove the CSS) in **Settings → CSS Inserter**. Afterward, select the text and perform the **Hotkey** (see [Hotkeys](https://help.obsidian.md/User+interface/Hotkeys)).
