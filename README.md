@@ -20,7 +20,7 @@ Give your snippet a **name** and specify the HTML **tag**, the **class**, and th
 
 ![Settings panel](./Attachments/settings-panel.png#interface)
 
-You can re-order snippets by pressing the **up arrow** ( ![Up arrow](./Attachments/icons/lucide-arrow-up.svg#18x18) ) and **down arrow** ( ![Down arrow](./Attachments/icons/lucide-arrow-down.svg#18x18) ) buttons next to the snippet, or delete the entire snippet by pressing the **trash bin** ( ![Trash bin](./Attachments/icons/lucide-trash-2.svg#18x18) ) button.
+You can re-order snippets by pressing the **up arrow** ( <svg xmlns="./Attachments/icons/lucide-arrow-up.svg#18x18" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-layout-dashboard"></svg> ) and **down arrow** ( ![Down arrow](./Attachments/icons/lucide-arrow-down.svg#18x18) ) buttons next to the snippet, or delete the entire snippet by pressing the **trash bin** ( ![Trash bin](./Attachments/icons/lucide-trash-2.svg#18x18) ) button.
 
 The **toggle** option next to the snippet disables/enables showing the CSS snippet in the **Context menu**.
 
