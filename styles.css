@@ -8,89 +8,94 @@ If your plugin does not need CSS, delete this file.
 */
 
 .css-inserter mark {
-	border-radius: 0.2em;
+    border-radius: 0.2em;
 }
 
 /* Setting Header */
 .setting-header {
-	display: flex;
-	margin-bottom: 5px;
+    display: flex;
+    margin-bottom: var(--size-4-1);
 }
 
-div.value-header, div.tag-header, div.style-header {
-	padding-left: 0px;
-	font-size: 20px;
+div.value-header,
+div.tag-header,
+div.style-header {
+    padding-left: 0px;
+    font-size: 20px;
 }
 
-div.value-header, .css-inserter-setting-item {
-	flex: 1;
+div.value-header,
+.css-inserter-setting-item {
+    flex: 1;
 }
 
-div.tag-header, .css-inserter-setting-item-tag {
-	flex: 0.3;
-	min-width: 50px;
+div.tag-header,
+.css-inserter-setting-item-tag {
+    flex: 0.3;
+    min-width: var(--size-4-12);
 }
 
-div.style-header, .css-inserter-setting-item-style {
-	flex: 1.5;
+div.style-header,
+.css-inserter-setting-item-style {
+    flex: 1.5;
 }
 
 .contextMenu-header {
-	display: flex;
-	width: 40px;
+    display: flex;
+    width: var(--size-4-9);
 }
 
 .container_add_button {
-	/* text-align: right;
+    /* text-align: right;
 	margin-bottom: 20px; */
-	display: flex;
-	width: 138px;
+    display: flex;
+    width: math(var(--size-4-12) * 3);
 }
 
 .container_add_button button {
-	margin-left: auto;
-	background-color: var(--interactive-accent);
-	font-size: medium;
+    margin-left: auto;
+    background-color: var(--interactive-accent);
+    font-size: medium;
 }
 
 /* Setting Items */
 .setting-item-container {
-	display: flex;
-	flex-direction: row;
-	border-top: 1px solid var(--background-modifier-border);
-	padding-top: 11px;
-	padding-bottom: 11px;
-	border-bottom: 1px solid var(--background-modifier-border);
+    display: flex;
+    flex-direction: row;
+    border-top: 1px solid var(--background-modifier-border);
+    padding-top: 11px;
+    padding-bottom: 11px;
+    border-bottom: 1px solid var(--background-modifier-border);
 
 }
 
 input.css-inserter-setting-item {
-	/* width: 100%;
+    /* width: 100%;
 	width: 90%; */
-	flex: 0.6;
-	margin-right: 10px;
-	line-height: var(--line-height-tight);
+    flex: 0.6;
+    margin-right: 10px;
+    line-height: var(--line-height-tight);
 
-	-webkit-app-region: no-drag;
-	background: var(--background-modifier-form-field);
-	border: var(--input-border-width) solid var(--background-modifier-border);
-	color: var(--text-normal);
-	font-family: inherit;
-	padding: var(--size-4-1) var(--size-4-2);
-	font-size: var(--font-ui-medium);
-	font-size: 15px;
-	font-weight: normal;
-	border-radius: var(--input-radius);
-	outline: none;
+    -webkit-app-region: no-drag;
+    background: var(--background-modifier-form-field);
+    border: var(--input-border-width) solid var(--background-modifier-border);
+    color: var(--text-normal);
+    font-family: inherit;
+    padding: var(--size-4-1) var(--size-4-2);
+    font-size: var(--font-ui-medium);
+    font-size: 15px;
+    font-weight: normal;
+    border-radius: var(--input-radius);
+    outline: none;
 }
 
 input.css-inserter-setting-item: active {
-	box-shadow: 0 0 0 2px var(--background-modifier-border-focus);
+    box-shadow: 0 0 0 2px var(--background-modifier-border-focus);
 }
 
 input.css-inserter-setting-item: focus {
-	box-shadow: 0 0 0 2px var(--background-modifier-border-focus);
-	transistion: box-shadow 0.15s ease-in-out, border 0.15s esse-in-out;
+    box-shadow: 0 0 0 2px var(--background-modifier-border-focus);
+    transition: box-shadow 0.15s ease-in-out, border 0.15s esse-in-out;
 }
 
 /* .setting-item-name input {
@@ -98,49 +103,52 @@ input.css-inserter-setting-item: focus {
 	font-size: 1.05em;
 } */
 
-.css-inserter-setting-item, .css-inserter-setting-item-tag, .css-inserter-setting-item-style {
-	width: 100%;
-    margin-right: 5px;
+.css-inserter-setting-item,
+.css-inserter-setting-item-tag,
+.css-inserter-setting-item-style {
+    width: 100%;
+    margin-right: var(--size-4-1);
 }
 
-.css-inserter-setting-item input, .css-inserter-setting-item-tag input, .css-inserter-setting-item-style input {
-	width: 100%;
-	font-size: 1.05em;
+.css-inserter-setting-item input,
+.css-inserter-setting-item-tag input,
+.css-inserter-setting-item-style input {
+    width: 100%;
+    font-size: 1.05em;
 }
 
 .css-inserter-setting-item-contextMenu .checkbox-container {
-	display: flex;
-	margin-top: 4px;
-	margin-right: 5px;
+    display: flex;
+    margin-top: var(--size-4-1);
+    margin-right: var(--size-4-1);
 }
 
 .css-inserter-button-container {
-	text-align: right;
-    width: 46px;
-	display: flex;
-	/* flex: 0.1; */
+    text-align: right;
+    width: var(--size-4-12);
+    display: flex;
 }
 
 .css-inserter-delete-css-button {
-	background-color: var(--background-modifier-error);
+    background-color: var(--background-modifier-error);
 }
 
 
 /* Instructions */
 .container-instructions {
-	margin-top: 40px;
+    margin-top: 40px;
 }
 
 .instructions {
-	color: var(--text-muted);
-	font-size: var(--font-ui-smaller);
-	font-style: normal;
+    color: var(--text-muted);
+    font-size: var(--font-ui-smaller);
+    font-style: normal;
 }
 
 p.instructions {
-	margin-bottom: 5px;
+    margin-bottom: 5px;
 }
 
 ul.instructions {
-	margin-top: 1px;
+    margin-top: 1px;
 }
