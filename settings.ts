@@ -40,7 +40,7 @@ export class GeneralSettingsTab extends PluginSettingTab {
         containerEl.createEl('span', { text: ' created by ', cls: 'instructions' }).createEl('a', { text: 'Juanjo Arranz', href: 'https://github.com/juanjoarranz', cls: 'instructions' }).createEl('br');
         containerEl.createEl('span', { text: 'Modified by Erika Gozar', cls: 'instructions' });
 
-        containerEl.createEl('h1', { text: 'CSS Inserter' });
+        /* containerEl.createEl('h1', { text: 'CSS Inserter' }); */
         containerEl.createEl('p', { text: 'CSS snippets to be applied to the selected text:' });
 
         const settingHeader: HTMLDivElement = containerEl.createDiv({ cls: "setting-header" });
