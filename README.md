@@ -24,7 +24,7 @@ You can re-order snippets by pressing the **up arrow** ( ![Up arrow](./Attachmen
 
 The **toggle** option next to the snippet disables/enables showing the CSS snippet in the **Context menu**.
 
-## Apply and Remove CSS snippets
+## Apply and remove CSS snippets
 To apply or remove a CSS snippet, first go into **Edit mode** and select the text you want to apply the snippet to or remove the snippet from. The first time you select text that already has CSS snippets applied, the entire text will automatically be selected for you.
 
 After you do that, there are three ways you can apply or remove a CSS snippet:
