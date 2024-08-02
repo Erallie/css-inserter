@@ -4,6 +4,6 @@
     "version": "1.0.7",
     "minAppVersion": "1.6.7",
     "description": "Inserts user-defined css snippets into the selected text.",
-    "author": "Erika Gozar",
+    "author": "Erika Gozar, Juanjo Arranz",
     "isDesktopOnly": false
 }

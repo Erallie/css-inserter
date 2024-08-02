@@ -13,10 +13,10 @@ export interface CSSInserterSettings {
 
 export const DEFAULT_SETTINGS: CSSInserterSettings = {
     css: [
-        { name: "Chapter Number", tag: "h2", class: "chapter-number", style: "font-size: 4em", contextMenu: false },
-        { name: "No Indent", tag: "p", class: "no-indent", style: "text-indent: 0", contextMenu: false },
-        { name: "Yellow Highlight", tag: "span", class: "highlight", style: "background-color: #fff88f; color: black", contextMenu: true },
-        { name: "Green Highlight", tag: "span", class: "highlight", style: "background-color: #1EFF00; color: black", contextMenu: true },
+        { name: "Chapter number", tag: "h2", class: "chapter-number", style: "font-size: 4em", contextMenu: false },
+        { name: "No indent", tag: "p", class: "no-indent", style: "text-indent: 0", contextMenu: false },
+        { name: "Yellow highlight", tag: "span", class: "highlight", style: "background-color: #fff88f; color: black", contextMenu: true },
+        { name: "Green highlight", tag: "span", class: "highlight", style: "background-color: #1EFF00; color: black", contextMenu: true },
         { name: "Nothing", tag: "span", class: "", style: "", contextMenu: false },
     ]
 }
@@ -36,9 +36,6 @@ export class GeneralSettingsTab extends PluginSettingTab {
         this.clearHtml();
 
         containerEl.empty();
-        containerEl.createEl('span', { text: 'A fork of ', cls: 'instructions' }).createEl('a', { text: 'Style Text', href: 'https://github.com/juanjoarranz/style-text-obsidian-plugin', cls: 'instructions' });
-        containerEl.createEl('span', { text: ' created by ', cls: 'instructions' }).createEl('a', { text: 'Juanjo Arranz', href: 'https://github.com/juanjoarranz', cls: 'instructions' }).createEl('br');
-        containerEl.createEl('span', { text: 'Modified by Erika Gozar', cls: 'instructions' });
 
         /* containerEl.createEl('h1', { text: 'CSS Inserter' }); */
         containerEl.createEl('p', { text: 'CSS snippets to be applied to the selected text:' });
@@ -96,7 +93,7 @@ export class GeneralSettingsTab extends PluginSettingTab {
         const cssCounter = counter ?? css.length + 1; // 1-based
 
         if (!counter) {
-            const newCSS: CSS = { name: "Yellow Highlight", tag: "span", class: "highlight", style: "background-color: #fff88f; color: black", contextMenu: false };
+            const newCSS: CSS = { name: "Yellow highlight", tag: "span", class: "highlight", style: "background-color: #fff88f; color: black", contextMenu: false };
             css.push(newCSS);
             this.plugin.addCSSCommand(newCSS, cssCounter);
             this.plugin.saveSettings();
@@ -226,7 +223,7 @@ export class GeneralSettingsTab extends PluginSettingTab {
         const deleteButtonContainer = settingItemContainer.createDiv({ cls: 'css-inserter-button-container' });
         const deleteButton = new ButtonComponent(deleteButtonContainer);
         deleteButton.setIcon('lucide-trash-2').setClass('css-inserter-delete-css-button')
-            .setTooltip("Remove CSS Snippet")
+            .setTooltip("Remove CSS snippet")
             .onClick(async () => {
                 this.plugin.settings.css.splice(cssCounter - 1, 1);
                 await this.plugin.saveSettings();
@@ -297,7 +294,7 @@ export class GeneralSettingsTab extends PluginSettingTab {
 
 
         // Remove Applied CSS
-        containerInstructions.createEl('p', { text: 'Remove Applied CSS Snippet:', cls: 'instructions' });
+        containerInstructions.createEl('p', { text: 'Remove applied CSS snippet:', cls: 'instructions' });
         const removeUl = containerInstructions.createEl('ul', { cls: 'instructions' });
         removeUl.createEl('li', { text: 'Select the CSS-ified text in the editor' });
         const openCP2 = removeUl.createEl('li');
@@ -308,9 +305,15 @@ export class GeneralSettingsTab extends PluginSettingTab {
         openCPUl2Desktop.createEl('span', { text: 'Desktop: ' }).createEl('code', { text: 'Ctrl' });
         openCPUl2Desktop.createEl('span', { text: ' or ' }).createEl('code', { text: 'Cmd' });
         openCPUl2Desktop.createEl('span', { text: ' + ' }).createEl('code', { text: 'P' });
-        openCPUl2.createEl('li', { text: 'Mobile: Swipe Down' });
+        openCPUl2.createEl('li', { text: 'Mobile: Swipe down' });
         removeUl.createEl('li', { text: 'Look up: \"CSS Remove\"' });
         removeUl.createEl('li', { text: 'Select the command: ' }).createEl('code', { text: 'Enter' });
+
+        //Credit authors
+        const credit = containerEl.createEl('p');
+        credit.createEl('span', { text: 'A fork of ', cls: 'instructions' }).createEl('a', { text: 'Style Text', href: 'https://github.com/juanjoarranz/style-text-obsidian-plugin', cls: 'instructions' });
+        credit.createEl('span', { text: ' created by ', cls: 'instructions' }).createEl('a', { text: 'Juanjo Arranz', href: 'https://github.com/juanjoarranz', cls: 'instructions' }).createEl('br');
+        credit.createEl('span', { text: 'Modified by Erika Gozar', cls: 'instructions' });
     }
 
     /* private donate(containerEl: HTMLElement) {
