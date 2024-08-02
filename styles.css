@@ -27,7 +27,7 @@ div.style-header {
 div.value-header,
 .css-inserter-setting-item {
     flex: 1;
-    min-width: var(--size-4-16);
+    min-width: 100px;
 }
 
 div.tag-header,
@@ -39,7 +39,7 @@ div.tag-header,
 div.style-header,
 .css-inserter-setting-item-style {
     flex: 1.5;
-    min-width: var(--size-4-18);
+    min-width: 140px;
 }
 
 .contextMenu-header {

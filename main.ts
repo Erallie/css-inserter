@@ -15,6 +15,7 @@ export default class CSSInserter extends Plugin {
         this.addCommand({
             id: 'remove-css',
             name: 'Remove CSS',
+            icon: 'lucide-eraser',
             editorCallback: (editor: Editor, view: MarkdownView) => {
                 const selection = editor.getSelection();
                 editor.replaceSelection(this.betterClearHTMLTags(selection));
@@ -60,6 +61,7 @@ export default class CSSInserter extends Plugin {
         this.addCommand({
             id: `insert-css${index}`,
             name: `${css.name}`,
+            icon: 'lucide-highlighter',
             editorCallback: (editor: Editor, view: MarkdownView) => {
                 const selection = editor.getSelection();
                 let thisClass = "";
