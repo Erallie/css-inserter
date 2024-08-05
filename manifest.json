@@ -1,7 +1,7 @@
 {
     "id": "css-inserter",
     "name": "CSS Inserter",
-    "version": "1.0.9",
+    "version": "1.0.10",
     "minAppVersion": "1.6.7",
     "description": "Inserts user-defined css snippets into the selected text.",
     "author": "Erika Gozar, Juanjo Arranz",

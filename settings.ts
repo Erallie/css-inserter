@@ -131,7 +131,7 @@ export class GeneralSettingsTab extends PluginSettingTab {
                             class: currentCSS.class,
                             style: currentCSS.style,
                             contextMenu: currentCSS.contextMenu
-                        }, cssCounter);
+                        }, cssCounter + 1);
                     })
             });
         new Setting(settingItemContainer)

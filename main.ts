@@ -57,7 +57,7 @@ export default class CSSInserter extends Plugin {
 
     // index: 1-based
     addCSSCommand(css: CSS, index: number) {
-        const isHighlight = css.style.indexOf("background-color") !== -1;
+        // const isHighlight = css.style.indexOf("background-color") !== -1;
         this.addCommand({
             id: `insert-css${index}`,
             name: `${css.name}`,
@@ -65,20 +65,14 @@ export default class CSSInserter extends Plugin {
             editorCallback: (editor: Editor, view: MarkdownView) => {
                 const selection = editor.getSelection();
                 let thisClass = "";
-                if (`${css.class}` == "") {
-                    thisClass = "";
-                }
-                else {
-                    thisClass = ` class=\"${css.class}\"`;
+                if (`${css.class}` != "") {
+                    thisClass = ` class="${css.class}"`;
                 }
                 let thisStyle = "";
-                if (`${css.style}` == "") {
-                    thisStyle = "";
+                if (`${css.style}` != "") {
+                    thisStyle = ` style="${css.style}"`;
                 }
-                else {
-                    thisStyle = ` style=\"${css.style}\"`;
-                }
-                editor.replaceSelection(`<${css.tag}` + thisClass + thisStyle + `>${selection}</${css.tag}>`);
+                editor.replaceSelection(`<${css.tag}${thisClass}${thisStyle}>${selection}</${css.tag}>`);
             }
         });
     }
