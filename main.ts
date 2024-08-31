@@ -17,8 +17,7 @@ export default class CSSInserter extends Plugin {
             name: 'Remove CSS',
             icon: 'lucide-eraser',
             editorCallback: (editor: Editor, view: MarkdownView) => {
-                const selection = editor.getSelection();
-                editor.replaceSelection(this.betterClearHTMLTags(selection));
+                this.removeCSS(editor);
             }
         });
 
@@ -85,7 +84,7 @@ export default class CSSInserter extends Plugin {
                 .setTitle("Remove CSS")
                 .setIcon("lucide-eraser")
                 .onClick(() => {
-                    enhancedApp.commands.executeCommandById(`css-inserter:remove-css`);
+                    this.removeCSS(editor)
                 })
         );
 
@@ -101,6 +100,11 @@ export default class CSSInserter extends Plugin {
                 );
             }
         });
+    }
+
+    removeCSS(editor: Editor) {
+        const selection = editor.getSelection();
+        editor.replaceSelection(this.betterClearHTMLTags(selection));
     }
 
     updateBodyListClass() {
