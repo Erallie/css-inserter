@@ -29,3 +29,23 @@ After you do that, there are three ways you can apply or remove a CSS snippet:
 1. Right-click the note (on desktop) or perform the command **Show context menu under cursor** to open the **Context menu**. Enabled snippets will appear there. Select the snippet you want to apply, or select **Remove CSS** to remove the applied CSS snippet.<br><img src="./Attachments/context-menu.png#interface" width=400px height=390px>
 2. Open the **Command palette** and search for and select the CSS style you'd like to apply, or perform the **CSS Inserter: Remove CSS** command to remove the CSS snippet (see [Command palette](https://help.obsidian.md/Plugins/Command+palette)).
 3. Set up a **Hotkey** prior in **Settings → CSS Inserter** for your desired CSS snippet (or for the **CSS Inserter: Remove CSS** command if you want to remove the CSS). Afterward, select the text and perform the **Hotkey** (see [Hotkeys](https://help.obsidian.md/User+interface/Hotkeys)).
+# Installation
+## Obsidian Marketplace
+To install this plugin via the Obsidian Marketplace, perform the following steps:
+1. Navigate to the CSS Inserter plugin page by either selecting [this link](https://obsidian.md/plugins?id=css-inserter) or doing the following:
+	1. Navigate to **Settings → Community plugins**
+	2. Select **Turn on community plugins**.
+	3. Select **Community plugins → Browse** and search for "CSS Inserter".
+2. Select **Install**.
+3. To enable the plugin, select **Enable**.
+## BRAT
+Install this plugin using [BRAT](https://obsidian.md/plugins?id=obsidian42-brat) by doing the following:
+1. Make sure the [BRAT](https://obsidian.md/plugins?id=obsidian42-brat) plugin is installed in your vault.
+2. Go to **Settings → BRAT → Beta Plugin List → Add Beta Plugin**
+3. Enter `https://github.com/Erallie/css-inserter` into the input field and select **Add Plugin**.
+## Manual installation
+To install this plugin manually, follow these steps:
+1. Go to the [Releases](https://github.com/Erallie/css-inserter/releases) page and find the latest release.
+2. Download `main.js`, `manifest.json`, and `styles.css`.
+3. Go to your **Plugins folder** (`[vault root]/.obsidian/plugins`) and create a new subfolder called `css-inserter`.
+4. Move the downloaded files to the new folder.
