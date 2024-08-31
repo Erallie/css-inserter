@@ -7,9 +7,9 @@ If your plugin does not need CSS, delete this file.
 
 */
 
-.css-inserter mark {
+/* .css-inserter mark {
     border-radius: 0.2em;
-}
+} */
 
 /* Setting Header */
 .setting-header {
@@ -91,11 +91,11 @@ input.css-inserter-setting-item {
     outline: none;
 }
 
-input.css-inserter-setting-item: active {
+input.css-inserter-setting-item:active {
     box-shadow: 0 0 0 2px var(--background-modifier-border-focus);
 }
 
-input.css-inserter-setting-item: focus {
+input.css-inserter-setting-item:focus {
     box-shadow: 0 0 0 2px var(--background-modifier-border-focus);
     transition: box-shadow 0.15s ease-in-out, border 0.15s esse-in-out;
 }
