@@ -88,18 +88,25 @@ export default class CSSInserter extends Plugin {
                 })
         );
 
-        this.settings.css.forEach((css, index) => {
-            if (css.contextMenu) {
-                menu.addItem((item) =>
-                    item
-                        .setTitle(css.name)
-                        .setIcon("lucide-highlighter")
-                        .onClick(() => {
-                            enhancedApp.commands.executeCommandById(`css-inserter:insert-css${index + 1}`);
-                        })
-                );
-            }
-        });
+        menu.addItem((item) => {
+            item
+                .setTitle("Insert CSS")
+                .setIcon('lucide-highlighter')
+            const snippetSubMenu: Menu = item.setSubmenu();
+            this.settings.css.forEach((css, index) => {
+                if (css.contextMenu) {
+                    snippetSubMenu.addItem((item) =>
+                        item
+                            .setTitle(css.name)
+                            .setIcon("lucide-highlighter")
+                            .onClick(() => {
+                                enhancedApp.commands.executeCommandById(`css-inserter:insert-css${index + 1}`);
+                            })
+                    );
+                }
+            });
+
+        })
     }
 
     removeCSS(editor: Editor) {
