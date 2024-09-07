@@ -1,4 +1,4 @@
-import { App, Editor, MarkdownView, Menu, Modal, Plugin } from 'obsidian';
+import { App, Editor, MarkdownView, Menu, Platform, Plugin } from 'obsidian';
 
 import { DEFAULT_SETTINGS, CSSInserterSettings, GeneralSettingsTab, CSS } from './settings'
 
@@ -78,6 +78,7 @@ export default class CSSInserter extends Plugin {
 
     CSSInserterInContextMenu = (menu: Menu, editor: Editor) => {
         const enhancedApp = this.app as EnhancedApp;
+        const settings = this.settings;
 
         menu.addItem((item) =>
             item
@@ -88,14 +89,10 @@ export default class CSSInserter extends Plugin {
                 })
         );
 
-        menu.addItem((item) => {
-            item
-                .setTitle("Insert CSS")
-                .setIcon('lucide-highlighter')
-            const snippetSubMenu: Menu = (item as any).setSubmenu();
-            this.settings.css.forEach((css, index) => {
+        function addSnippetItems(menu: Menu) {
+            settings.css.forEach((css, index) => {
                 if (css.contextMenu) {
-                    snippetSubMenu.addItem((item) =>
+                    menu.addItem((item) =>
                         item
                             .setTitle(css.name)
                             .setIcon("lucide-highlighter")
@@ -105,6 +102,28 @@ export default class CSSInserter extends Plugin {
                     );
                 }
             });
+        }
+
+        const subMenuMobile = new Menu();
+        if (Platform.isMobile)
+            addSnippetItems(subMenuMobile);
+
+        menu.addItem((item) => {
+            item
+                .setTitle("Insert CSS")
+                .setIcon('lucide-highlighter')
+            if (Platform.isDesktop) {
+                const snippetSubMenu: Menu = (item as any).setSubmenu();
+                addSnippetItems(snippetSubMenu);
+            }
+            else {
+                item.onClick((ev) => {
+                    if (ev instanceof MouseEvent)
+                        subMenuMobile.showAtMouseEvent(ev);
+                    else
+                        subMenuMobile.showAtPosition({ x: 20, y: 20 });
+                })
+            }
 
         })
     }
