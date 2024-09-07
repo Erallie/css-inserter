@@ -92,7 +92,7 @@ export default class CSSInserter extends Plugin {
             item
                 .setTitle("Insert CSS")
                 .setIcon('lucide-highlighter')
-            const snippetSubMenu: Menu = item.setSubmenu();
+            const snippetSubMenu: Menu = (item as any).setSubmenu();
             this.settings.css.forEach((css, index) => {
                 if (css.contextMenu) {
                     snippetSubMenu.addItem((item) =>
