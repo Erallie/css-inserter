@@ -141,6 +141,16 @@ input.css-inserter-setting-item:focus {
     margin-top: 40px;
 }
 
+.container-instructions>div {
+    margin-top: var(--size-4-2);
+    margin-bottom: var(--size-4-2);
+}
+
+.container-instructions>div>ul {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
 .instructions {
     color: var(--text-muted);
     font-size: var(--font-ui-smaller);

@@ -255,65 +255,83 @@ export class GeneralSettingsTab extends PluginSettingTab {
 
     private addInstructions(containerEl: HTMLElement) {
 
-        const containerInstructions = containerEl.createEl('div', { cls: 'container-instructions' });
+        const containerInstructions = containerEl.createDiv();
+        containerInstructions.addClasses(['container-instructions', 'instructions'])
 
 
         // Instructions
         //Link to list of tags
-        containerInstructions.createEl('span', { text: 'Here is a list of ', cls: 'instructions' }).createEl('a', { text: 'HTML tags', href: 'https://www.w3schools.com/tags/default.asp', cls: 'instructions' });
-        containerInstructions.createEl('span', { text: ' to use.', cls: 'instructions' }).createEl('br');
-        containerInstructions.createEl('br');
-        containerInstructions.createEl('span', { text: 'Here is a ', cls: 'instructions' }).createEl('a', { text: 'guide', href: 'https://www.w3schools.com/html/html_styles.asp', cls: 'instructions' });
-        // containerInstructions.createEl('a', { text: 'Here', href: 'https://www.w3schools.com/html/html_styles.asp', cls: 'instructions' });
-        containerInstructions.createEl('span', { text: ' on how to format the ', cls: 'instructions' }).createEl('b', { text: 'style', cls: 'instructions' })
-        containerInstructions.createEl('span', { text: ' part of the CSS snippet.', cls: 'instructions' }).createEl('br');
-        containerInstructions.createEl('span', { text: "Everything within the quotes following ", cls: 'instructions' }).createEl('code', { text: "style=", cls: 'instructions' })
-        containerInstructions.createEl('span', { text: " should be entered in the CSS snippet.", cls: 'instructions' }).createEl('br');
-        containerInstructions.createEl('br');
+        const htmlTagList = containerInstructions.createDiv();
+        htmlTagList.textContent = 'Here is a list of ';
+        htmlTagList.createEl('a', { text: 'HTML tags', href: 'https://www.w3schools.com/tags/default.asp' });
+        htmlTagList.appendText(' to use.')
+        const styleGuide = containerInstructions.createDiv();
+        styleGuide.textContent = 'Here is a ';
+        styleGuide.createEl('a', { text: 'guide', href: 'https://www.w3schools.com/html/html_styles.asp' });
+        styleGuide.appendText(' on how to format the ');
+        styleGuide.createEl('b', { text: 'style' })
+        styleGuide.appendText(' part of the CSS snippet.');
+        styleGuide.createEl('br');
+        styleGuide.appendText("Everything within the quotes following ")
+        styleGuide.createEl('code', { text: "style=" });
+        styleGuide.appendText(" should be entered in the CSS snippet.");
         /* containerInstructions.createEl('span', { text: "The ", cls: 'instructions' }).createEl("b", { text: "class", cls: 'instructions' });
         containerInstructions.createEl('span', { text: ' should have no spaces.', cls: 'instructions' }).createEl("br");
         containerInstructions.createEl('br'); */
 
 
         // With Command Palette
-        containerInstructions.createEl('span', { text: 'Usage with the ', cls: 'instructions' }).createEl("b", { text: "Command palette", cls: 'instructions' });
-        containerInstructions.createEl('span', { text: ':', cls: 'instructions' });
-        const commandPaletteUl = containerInstructions.createEl('ul', { cls: 'instructions' });
+        const commandPalette = containerInstructions.createDiv();
+        commandPalette.textContent = 'Usage with the ';
+        commandPalette.createEl("b", { text: "Command palette" });
+        commandPalette.appendText(':');
+        const commandPaletteUl = commandPalette.createEl('ul');
         commandPaletteUl.createEl('li', { text: 'Select text in the editor' });
         const openCP1 = commandPaletteUl.createEl('li');
-        openCP1.createEl('span', { text: 'Open the ' }).createEl('b', { text: 'Command palette' });
-        openCP1.createEl('span', { text: ':' });
-        const openCPUl1 = commandPaletteUl.createEl('ul', { cls: 'instructions' });
+        openCP1.textContent = 'Open the ';
+        openCP1.createEl('b', { text: 'Command palette' });
+        openCP1.appendText(':');
+        const openCPUl1 = commandPaletteUl.createEl('ul');
         const openCPUl1Desktop = openCPUl1.createEl('li');
-        openCPUl1Desktop.createEl('span', { text: 'Desktop: ' }).createEl('code', { text: 'Ctrl' });
-        openCPUl1Desktop.createEl('span', { text: ' or ' }).createEl('code', { text: 'Cmd' });
-        openCPUl1Desktop.createEl('span', { text: ' + ' }).createEl('code', { text: 'P' });
+        openCPUl1Desktop.textContent = 'Desktop: '
+        openCPUl1Desktop.createEl('code', { text: 'Ctrl' });
+        openCPUl1Desktop.appendText(' or ');
+        openCPUl1Desktop.createEl('code', { text: 'Cmd' });
+        openCPUl1Desktop.appendText(' + ')
+        openCPUl1Desktop.createEl('code', { text: 'P' });
         openCPUl1.createEl('li', { text: 'Mobile: Swipe Down' });
         commandPaletteUl.createEl('li', { text: 'Look up the CSS snippet to apply: "CSS Inserter ..."' });
         commandPaletteUl.createEl('li', { text: 'Select the CSS snippet: ' }).createEl('code', { text: 'Enter' });
 
 
         // Remove Applied CSS
-        containerInstructions.createEl('p', { text: 'Remove applied CSS snippet:', cls: 'instructions' });
-        const removeUl = containerInstructions.createEl('ul', { cls: 'instructions' });
+        const removeSnippet = containerInstructions.createDiv();
+        removeSnippet.textContent = 'Remove applied CSS snippet:';
+        const removeUl = removeSnippet.createEl('ul');
         removeUl.createEl('li', { text: 'Select the CSS-ified text in the editor' });
         const openCP2 = removeUl.createEl('li');
-        openCP2.createEl('span', { text: 'Open the ' }).createEl('b', { text: 'Command palette' });
-        openCP2.createEl('span', { text: ':' });
+        openCP2.textContent = 'Open the ';
+        openCP2.createEl('b', { text: 'Command palette' });
+        openCP2.appendText(':');
         const openCPUl2 = removeUl.createEl('ul', { cls: 'instructions' });
         const openCPUl2Desktop = openCPUl2.createEl('li');
-        openCPUl2Desktop.createEl('span', { text: 'Desktop: ' }).createEl('code', { text: 'Ctrl' });
-        openCPUl2Desktop.createEl('span', { text: ' or ' }).createEl('code', { text: 'Cmd' });
-        openCPUl2Desktop.createEl('span', { text: ' + ' }).createEl('code', { text: 'P' });
+        openCPUl2Desktop.textContent = 'Desktop: ';
+        openCPUl2Desktop.createEl('code', { text: 'Ctrl' });
+        openCPUl2Desktop.appendText(' or ');
+        openCPUl2Desktop.createEl('code', { text: 'Cmd' });
+        openCPUl2Desktop.appendText(' + ');
+        openCPUl2Desktop.createEl('code', { text: 'P' });
         openCPUl2.createEl('li', { text: 'Mobile: Swipe down' });
         removeUl.createEl('li', { text: 'Look up: \"CSS Remove\"' });
         removeUl.createEl('li', { text: 'Select the command: ' }).createEl('code', { text: 'Enter' });
 
         //Credit authors
-        const credit = containerEl.createEl('p');
-        credit.createEl('span', { text: 'A fork of ', cls: 'instructions' }).createEl('a', { text: 'Style Text', href: 'https://github.com/juanjoarranz/style-text-obsidian-plugin', cls: 'instructions' });
-        credit.createEl('span', { text: ' created by ', cls: 'instructions' }).createEl('a', { text: 'Juanjo Arranz', href: 'https://github.com/juanjoarranz', cls: 'instructions' }).createEl('br');
-        credit.createEl('span', { text: 'Modified by Erika Gozar', cls: 'instructions' });
+        const credit = containerInstructions.createDiv();
+        credit.textContent = 'A fork of ';
+        credit.createEl('a', { text: 'Style Text', href: 'https://github.com/juanjoarranz/style-text-obsidian-plugin' });
+        credit.appendText(' created by ');
+        credit.createEl('a', { text: 'Juanjo Arranz', href: 'https://github.com/juanjoarranz' }).createEl('br');
+        credit.appendText('Modified by Erika Gozar');
     }
 
     /* private donate(containerEl: HTMLElement) {
